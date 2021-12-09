@@ -51,7 +51,7 @@ public class CurveFittedDistanceCalculator implements DistanceCalculator {
         LogManager.d(TAG, "calculating distance based on mRssi of %s and txPower of %s", rssi, txPower);
 
 
-        double ratio = rssi*2.6/txPower;
+        double ratio = rssi*1/txPower;
         double distance;
         if (ratio < 1.0) {
             distance =  Math.pow(ratio,10);
